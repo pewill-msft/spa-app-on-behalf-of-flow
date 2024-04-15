@@ -64,7 +64,9 @@ response_mode=fragment&state=12345&nonce=678910
 Change `<tenant id>`, `<client id>` and `<api-01 client id>` to match your configuration
 
 You should then be prompted with a login dialog and after a successful login you should see an empty page. Since we don't have any web application listening on http://localhost the page will be empty but the URL will contain the result of the login. 
+
 ![image](https://github.com/pewill-msft/spa-app-on-behalf-of-flow/assets/105436708/28b4d3b8-9d2e-4bd7-870e-c46f29c37631)
+
 Copy the access token from the URL (make sure to remove all other url parameters before and after the access token)
 Validate the token by decoding the JWT using a tool such as `jwt.io` or `jwt.ms`.
 Ensure the following
