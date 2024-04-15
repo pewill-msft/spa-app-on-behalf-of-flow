@@ -102,6 +102,13 @@ Ensure the following
 - Scope (`scp`) should be `call_api`
 
 ## Considerations
+It is technically possible to leverage only two App Registrations and merge the APP and API-01 in the same registration
+![image](https://github.com/pewill-msft/spa-app-on-behalf-of-flow/assets/105436708/39f8d5c8-a109-43b3-bbf9-94cc9813465d)
 
-  
+See [Use of a single application](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-on-behalf-of-flow#use-of-a-single-application for details)
+
+The configuration steps would be identical but instead of doing the API-01 configuration on a separate Entra ID app it is done in the same app registration. The benefits would be that only two App registrations are needed (APP and API-02) but it can be a bit harder to understand the authentication flow.
+
+## References
+[Microsoft identity platform and OAuth 2.0 On-Behalf-Of flow](https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-on-behalf-of-flow)
 
