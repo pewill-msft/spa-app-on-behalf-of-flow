@@ -74,4 +74,32 @@ Ensure the following
 
 Call second API on-behalf-of the user
 
+![image](https://github.com/pewill-msft/spa-app-on-behalf-of-flow/assets/105436708/e9d76ffa-279b-43a5-aeb8-7d7df013b69f)
+
+Use a REST tool to make a POST request to get a token for API-02
+```
+POST https://login.microsoftonline.com/{{tenantId}}/oauth2/v2.0/token HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&
+client_id={{api-01 client id}}&
+client_secret={{api-01 client secret}}&
+assertion={{app-a access token}}&
+requested_token_use=on_behalf_of&
+scope={{api://<api-02 client id/call_api}}
+```
+Change `<tenant id>`, `<api-01 client id>`, `<api-02 client id>` and `<app a access token>` to match your configuration
+
+> [!NOTE]  
+> `app a access token` is the token received in the previous step with all additional parameters removed.
+
+As a result, you will you will get another access token in the response.
+Ensure the following
+- Audience (`aud`) should be `api://<api-01 client id>`
+- Application Id (`appid`) should be client id of API-01
+- Scope (`scp`) should be `call_api`
+
+## Considerations
+
+  
 
