@@ -49,7 +49,7 @@ Authorized client apps: `<api-01 client id>` on scope `call_api`
 > Again, the name of the scope (`call_api`) is not important and can be set to something that is more relevant for your application.
 
 ## Validate configuration
-Login to App and call first Api
+Login to APP and access API-01
 ![image](https://github.com/pewill-msft/spa-app-on-behalf-of-flow/assets/105436708/3aa8cc2c-2a17-4705-b524-60bd3af39010)
 
 Do a GET request by using the following URL in your browser
