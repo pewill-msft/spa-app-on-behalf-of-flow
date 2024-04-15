@@ -24,7 +24,7 @@ Use the following settings:
 - Authentication (Implicit grant and hybrid flows): `Access tokens` and `ID tokens`
 
 ### API-01
-Create an Entra ID App Registration for the API-01 APP
+Create an Entra ID App Registration for the API-01 API
 ![image](https://github.com/pewill-msft/spa-app-on-behalf-of-flow/assets/105436708/3328bc94-47b6-409c-b217-a5d4a10372d2)
 
 Use the following settings:
@@ -38,7 +38,7 @@ Create a client secret
 
 
 ### API-02
-Create an Entra ID App Registration for the API-02 App
+Create an Entra ID App Registration for the API-02 API
 ![image](https://github.com/pewill-msft/spa-app-on-behalf-of-flow/assets/105436708/1bf0590e-3b8f-42a7-94f4-7524277488bc)
 
 Use the following settings
